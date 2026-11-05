@@ -1,0 +1,11 @@
+[Unit]
+Description=PICO 4 fan control (GD32 MCU over UART)
+After=dev-ttyHS0.device
+
+[Service]
+ExecStart=/usr/libexec/pico4-fan/pico4-fand
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
